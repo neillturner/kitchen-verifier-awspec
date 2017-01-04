@@ -33,7 +33,7 @@ gem 'net-ssh','~> 2.9'
 gem 'awspec'
 ```
 
-this allows extra dependencies to be specified and the version of awspec specified.
+This allows extra dependencies to be specified and the version of awspec specified.
 
 # Awspec Verifier Options
 
