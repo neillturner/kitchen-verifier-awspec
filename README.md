@@ -46,13 +46,13 @@ color | true | enable color in the output
 custom_install_commmand | nil | Custom shell command to be used at install stage. Can be multiline. See examples below.
 custom_awspec_command | nil | custom command to run awspec. Can be multiline. See examples below.
 default_path | '/tmp/kitchen' | Set the default path where awspec looks for patterns
-default_pattern | false | use default dir behaviour of busser i.e. test/integration/SUIT_NAME/awspec/*_spec.rb
+default_pattern | false | use default dir for awspec i.e. spec/*_spec.rb
 env_vars | {} | environment variable to set for rspec and can be used in the spec_helper. It will automatically pickup any environment variables set with a KITCHEN_ prefix.
 extra_flags | nil | extra flags to add to ther awspec command
 format | 'documentation' | format of awspec output
 gemfile | nil | custom gemfile to use to install awspec
-http_proxy | nil | use http proxy when installing ruby, awspec and running awspec
-https_proxy | nil | use https proxy when installing puppet, ruby, awspec and running awspec
+http_proxy | nil | use http proxy when installing  awspec and running awspec
+https_proxy | nil | use https proxy when installing awspec and running awspec
 patterns | [] | array of patterns for spec test files
 remove_default_path | false | remove the default_path after successful awspec run
 rspec_path | | override path for rspec command
