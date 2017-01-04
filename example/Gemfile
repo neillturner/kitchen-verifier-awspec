@@ -2,4 +2,3 @@ source 'https://rubygems.org'
 
 gem 'awspec'
 gem 'net-ssh', '~> 2.9.4'
-
