@@ -101,14 +101,12 @@ module Kitchen
       # private
 
       def install_bundler
-        begin
-          require 'bundler'
-        rescue LoadError
-          shellout `gem install --no-ri --no-rdoc  bundler`
-        end
+        require 'bundler'
+      rescue LoadError
+        shellout `gem install --no-ri --no-rdoc  bundler`
       end
 
-      # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
+      # rubocop:disable Metrics/CyclomaticComplexity
       def install_awspec
         if config[:test_awspec_installed]
           begin
