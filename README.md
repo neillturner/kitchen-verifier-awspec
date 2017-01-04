@@ -68,6 +68,8 @@ Verifier awspec runs locally on your workstation and uses aws sdk to verify the 
 
 Verifier Awspec allows the awspec files to be anywhere in the repository or in the awspec default location i.e /spec.
 
+(see https://github.com/k1LoW/awspec)
+
 
 ## Example
 
