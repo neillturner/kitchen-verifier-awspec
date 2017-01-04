@@ -79,8 +79,8 @@ driver:
   stack_name: awspecTest
   ssh_key: spec/test.pem
   template_file: EC2InstanceSample.yml
-#  parameters:
-#    - KeyName: test
+  parameters:
+    KeyName: test
 
 provisioner:
   name: dummy
@@ -100,6 +100,8 @@ suites:
 ```
 
 In a command line run the follow line commands to setup environment variables for AWS and run test-kitchen
+
+(See http://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-chap-getting-started.html#config-settings-and-precedence)
 
 ```
 cd kitchen-verifier-awspec/example

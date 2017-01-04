@@ -5,10 +5,10 @@ Description: 'AWS CloudFormation Sample Template EC2InstanceSample: Create an Am
   to the new instance using the KeyPair you enter, you will need to have port 22 open
   in your default security group. **WARNING** This template an Amazon EC2 instances.
   You will be billed for the AWS resources used if you create a stack from this template.'
-#Parameters:
-#  KeyName:
-#    Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
-#    Type: String
+Parameters:
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
+    Type: String
 Mappings:
   RegionMap:
     us-east-1:
@@ -31,8 +31,7 @@ Resources:
   Ec2Instance:
     Type: AWS::EC2::Instance
     Properties:
-#      KeyName: !Ref 'KeyName'
-      KeyName: test
+      KeyName: !Ref 'KeyName'
       ImageId: !FindInMap [RegionMap, !Ref 'AWS::Region', AMI]
       UserData: !Base64 '80'
       Tags:
