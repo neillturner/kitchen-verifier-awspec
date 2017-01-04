@@ -1,0 +1,24 @@
+---
+driver:
+  name: cloudformation
+  stack_name: awspecTest
+  ssh_key: spec/test.pem
+  template_file: EC2InstanceSample.yml
+#  parameters:
+#    - KeyName: test
+
+provisioner:
+  name: dummy
+
+platforms:
+  - name: aws
+
+verifier:
+  name: awspec
+
+suites:
+  - name: base
+    verifier:
+      default_pattern: true
+#      patterns:
+#      - spec/test_spec.rb

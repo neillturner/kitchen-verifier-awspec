@@ -1,0 +1,24 @@
+Documentation:
+  Enabled: false
+AlignParameters:
+  Enabled: true
+Encoding:
+  Enabled: true
+HashSyntax:
+  Enabled: false
+LineLength:
+  Enabled: false
+MethodLength:
+  Enabled: false
+ClassLength:
+  Enabled: false
+NumericLiterals:
+  MinDigits: 10
+AbcSize:
+  Enabled: false
+MultilineOperationIndentation:
+  Enabled: false
+RedundantFreeze:
+  Enabled: false
+Style/BlockDelimiters:
+  Enabled: false
