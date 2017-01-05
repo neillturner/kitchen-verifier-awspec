@@ -4,8 +4,11 @@ driver:
   stack_name: awspecTest
   ssh_key: spec/test.pem
   template_file: EC2InstanceSample.yml
+  on_failure: ROLLBACK
   parameters:
     KeyName: test
+  tags:
+    Name: awspecTest
 
 provisioner:
   name: dummy
