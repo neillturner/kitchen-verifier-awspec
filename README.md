@@ -101,20 +101,50 @@ suites:
 
 ```
 
-In a command line run the follow line commands to setup environment variables for AWS and run test-kitchen
+### Configure AWS credentials
+
+Configure your local workstation with AWS credentials using one of the following methods:
+
+#### Method 1: Configure command
+
+Provide the values of your AWS access and secret keys, and optionally default region and output format:
+
+```sh
+$ aws configure
+AWS Access Key ID [None]: AKID1234567890
+AWS Secret Access Key [None]: MY-SECRET-KEY
+Default region name [None]: us-west-2
+Default output format [None]: text
+```
+
+#### Method 2: Config file
+
+Write your credentials into the file `~/.aws/credentials` using the following template:
+
+```
+[default]
+aws_access_key_id = AKID1234567890
+aws_secret_access_key = MY-SECRET-KEY
+aws_region=eu-west-1
+```
+
+#### Method 3: Environment variables
+
+Provide AWS credentials to kube-aws by exporting the following environment variables:
+
+```sh
+export AWS_ACCESS_KEY_ID=AKID1234567890
+export AWS_SECRET_ACCESS_KEY=MY-SECRET-KEY
+export AWS_REGION=eu-west-1
+```
 
 (See http://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-chap-getting-started.html#config-settings-and-precedence)
+
+### Run test-kitchen
 
 ```
 cd kitchen-verifier-awspec/example
 
-# configure aws keys via either a profile
-export AWS_DEFAULT_PROFILE=myprofile
-# or set keys directly
-export AWS_ACCESS_KEY_ID=myaccesskey
-export AWS_SECRET_ACCESS_KEY=mysecretkey
-
-export AWS_REGION=eu-west-1
 # for windows set the ssl cert file
 set SSL_CERT_FILE=C:/repository/kitchen-verifier-awspec/example/ca-bundle.crt
 
