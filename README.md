@@ -6,7 +6,7 @@
 
 A Test Kitchen Awspec Verifer.
 
-Can by used in conjunction with kitchen-cloudformation and kitchen-terraform to validate AWS infrastructure changes.
+Can be used in conjunction with kitchen-cloudformation and kitchen-terraform to validate AWS infrastructure changes.
 
 
 ## Installation
