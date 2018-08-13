@@ -126,7 +126,7 @@ module Kitchen
         end
         gemfile = config[:gemfile] if config[:gemfile]
         begin
-          shellout "#{bundler_local_cmd} install --gemfile=#{gemfile}"
+          shellout "#{bundler_local_cmd} install --gemfile='#{gemfile}'"
         rescue
           raise ActionFailed, 'Awspec install failed'
         end
@@ -177,7 +177,7 @@ module Kitchen
           info("Using default pattern #{config[:default_path]}/spec/*_spec.rb")
           config[:patterns] = ["#{config[:default_path]}/spec/*_spec.rb"]
         end
-        config[:patterns].map { |s| "#{env_vars} #{sudo_env(rspec_cmd)} #{color} -f #{config[:format]} --default-path  #{config[:default_path]} #{config[:extra_flags]} -P #{s}" }.join(';')
+        config[:patterns].map { |s| "#{env_vars} #{sudo_env(rspec_cmd)} #{color} -f #{config[:format]} --default-path '#{config[:default_path]}' #{config[:extra_flags]} -P '#{s}'" }.join(';')
       end
 
       def rspec_cmd
